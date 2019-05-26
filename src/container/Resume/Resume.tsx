@@ -52,11 +52,11 @@ class Resume extends Component<IProps, IState> {
                 <Row className='resume__contact'>
 
                     <Col>
-                        <ContactInfo 
+                        <ContactInfo
                             authenticated
-                            email="dummy@gmail.com" 
-                            address="Recife Pernambuco" 
-                            social_media="facebook.com" 
+                            email="dummy@gmail.com"
+                            address="Recife Pernambuco"
+                            social_media="facebook.com"
                             phone_number="99388-2223"
                         />
                     </Col>
@@ -67,7 +67,7 @@ class Resume extends Component<IProps, IState> {
 
                     <Col>
                         <h2>Experiência Profissional</h2>
-                        <WorkExperience 
+                        <WorkExperience
                             experiences={[
                                 {
                                     job_name: 'Celpe', rule: 'Dev. Fullstack', start_date: '2015-04-24', end_date: '2018-04-07', tasks: [
@@ -75,7 +75,7 @@ class Resume extends Component<IProps, IState> {
                                         'Automação de relatórios',
                                         'Supporte de manuntenção',
                                         'Criação de Projetos Inovadores P&D'
-                                    ]                            
+                                    ]
                                 },
                                 {
                                     job_name: 'Fábrica de Negócio', rule: 'Dev. Fullstack', start_date: '2018-05-03', end_date: '', tasks: [
@@ -83,13 +83,13 @@ class Resume extends Component<IProps, IState> {
                                         'Automação de relatórios',
                                         'Supporte de manuntenção',
                                         'Criação de Projetos Inovadores P&D'
-                                    ]                            
+                                    ]
                                 }
                             ]}
                         />
 
                         <h2>Educação</h2>
-                        <Educations 
+                        <Educations
                             educations={[
                                 {
                                     course: "Engenharia da Computação",
@@ -99,21 +99,23 @@ class Resume extends Component<IProps, IState> {
                                 }
                             ]}
                         />
-                        
+
                     </Col>
 
                     <Col>
                         <p>
                             <Languages
-                            onUpdate={() => {
-                                //todo: função de atualização
-                            }}
-                            languages={[
-                                {
-                                    language: "Inglês",
-                                    level: "intermediate"
-                                }
-                            ]} />
+                                authenticated
+                                username="Ericks"
+                                onUpdate={() => {
+                                    //todo: função de atualização
+                                }}
+                                languages={[
+                                    {
+                                        language: "Inglês",
+                                        level: "intermediate"
+                                    }
+                                ]} />
                         </p>
                     </Col>
 
