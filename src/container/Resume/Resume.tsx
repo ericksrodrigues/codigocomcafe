@@ -7,6 +7,7 @@ import WorkExperience from '../../components/WorkExperience/WorkExperience';
 import './Resume.scss';
 import Languages from '../../components/Languages/Languages';
 import Educations from '../../components/Education/Educations';
+import Skills from '../../components/Skills/Skills';
 
 interface IProps {
 
@@ -101,7 +102,6 @@ class Resume extends Component<IProps, IState> {
                         />
 
                     </Col>
-
                     <Col>
                         <p>
                             <Languages
@@ -117,9 +117,33 @@ class Resume extends Component<IProps, IState> {
                                     }
                                 ]} />
                         </p>
+                        <Row>
+                            <Col>
+                                <p>
+                                    <Skills
+                                        authenticated
+                                        username="Ericks"
+                                        onUpdate={() => {
+                                            //todo: função de atualização
+                                        }}
+                                        skills={[
+                                            {
+                                                skill: "Pentaho",
+                                                level: "basic"
+                                            },
+                                            {
+                                                skill: "Javascript",
+                                                level: "advanced"
+                                            }
+                                        ]} />
+                                </p>
+                            </Col>
+
+                        </Row>
                     </Col>
 
                 </Row>
+
 
             </Container>
         );
