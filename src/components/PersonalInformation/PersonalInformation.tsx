@@ -11,15 +11,9 @@ interface IProps {
     username: string,
 }
 
-interface IState {
-    modal: Boolean
-}
 
-class PersonalInformation extends Component<IProps, IState> {
 
-    state = {
-        modal: false
-    }
+class PersonalInformation extends Component<IProps> {
 
     updateHandler = (): void => {
         //todo
@@ -29,7 +23,6 @@ class PersonalInformation extends Component<IProps, IState> {
         const { authenticated, name, job, resume, username } = this.props;
         return (
             <div>
-
                 <h1 data-test="params">{name}</h1>
                 <h2 data-test="params">{job}</h2>
                 <p data-test="params">{resume}</p>

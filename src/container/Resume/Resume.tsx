@@ -4,6 +4,7 @@ import user_image from '../../assets/user-image.png';
 import PersonalInformation from '../../components/PersonalInformation/PersonalInformation';
 import ContactInfo from '../../components/ContactInfo/ContactInfo';
 import './Resume.scss';
+import Languages from '../../components/Languages/Languages';
 
 interface IProps {
 
@@ -49,7 +50,7 @@ class Resume extends Component<IProps, IState> {
                 <Row className='resume__contact'>
 
                     <Col>
-                        <ContactInfo email="dummy@gmail.com" address="Recife Pernambuco" social_media="facebook.com" phone_number="99388-2223"/>
+                        <ContactInfo email="dummy@gmail.com" address="Recife Pernambuco" social_media="facebook.com" phone_number="99388-2223" />
                     </Col>
 
                 </Row>
@@ -62,7 +63,16 @@ class Resume extends Component<IProps, IState> {
 
                     <Col>
                         <p>
-                            Skills and levels
+                            <Languages
+                            onUpdate={() => {
+                                //todo: função de atualização
+                            }}
+                            languages={[
+                                {
+                                    language: "Inglês",
+                                    level: "intermediate"
+                                }
+                            ]} />
                         </p>
                     </Col>
 
