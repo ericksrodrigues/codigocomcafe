@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ModalPersonalInformation from './ModalPersonalInformation/ModalPersonalInformation';
+import { Button } from 'reactstrap';
+import ModalUpdate from '../../hoc/ModalUpdate/ModalUpdate';
 
 interface IProps {
     name?: string,
     job?: string,
     resume?: string,
-    authenticated?: boolean,
+    authenticated?: Boolean,
     username: string,
 }
 
-const personalInformation: React.FC<IProps> = (props) => (
-    <div>
-        {props.authenticated ? <ModalPersonalInformation username={props.username} /> : null}
-        <span data-test="params">{props.name}</span>
-        <span data-test="params">{props.job}</span>
-        <span data-test="params">{props.resume}</span>
-        {props.authenticated ? <button data-test="update-button">Alterar</button> : null}
-    </div>
-)
+interface IState {
+    modal: Boolean
+}
 
-export default personalInformation;
+class PersonalInformation extends Component<IProps, IState> {
+
+    state = {
+        modal: false
+    }
+
+    updateHandler = (): void => {
+        //todo
+    }
+
+    public render() {
+        const { authenticated, name, job, resume, username } = this.props;
+        return (
+            <div>
+
+                <span data-test="params">{name}</span>
+                <span data-test="params">{job}</span>
+                <span data-test="params">{resume}</span>
+                {authenticated ? (
+                    <ModalUpdate onSubmitHandler={this.updateHandler}>
+                        <ModalPersonalInformation username={username} />
+                    </ModalUpdate>) : null}
+            </div>
+        )
+    }
+}
+
+export default PersonalInformation;
