@@ -32,13 +32,15 @@ class ModalLanguages extends Component<IProps, IState>{
 
 
     addLanguageHandler = (): void => {
-        this.setState({
-            languages: [...this.state.languages, this.state.newLanguage],
-            newLanguage: {
-                language: "",
-                level: "basic"
-            }
-        });
+        if (this.state.newLanguage.language !== '') {
+            this.setState({
+                languages: [...this.state.languages, this.state.newLanguage],
+                newLanguage: {
+                    language: "",
+                    level: "basic"
+                }
+            });
+        }
     }
 
     removeLanguageHandler = (language: { language: string, level: "basic" | "intermediate" | "advanced" | "fluent" }): void => {

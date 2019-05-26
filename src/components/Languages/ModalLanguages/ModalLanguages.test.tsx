@@ -44,6 +44,17 @@ describe('<ModalLanguages />', () => {
             language: "Português",
             level: "fluent"
         }]);
-});
+    });
+    it('cannot add empty languages', () => {
+        wrapper.find("#language").simulate('change', {
+            target: {
+                value: ''
+            }
+        });
+        wrapper.find("#add_language").simulate("click");
+        const modal = wrapper.instance() as ModalLanguages;
+        const languages = modal.state.languages;
+        expect(languages).toHaveLength(0);
+    })
 
 })
