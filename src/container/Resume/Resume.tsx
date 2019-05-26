@@ -6,6 +6,7 @@ import ContactInfo from '../../components/ContactInfo/ContactInfo';
 import WorkExperience from '../../components/WorkExperience/WorkExperience';
 import './Resume.scss';
 import Languages from '../../components/Languages/Languages';
+import Educations from '../../components/Education/Educations';
 
 interface IProps {
 
@@ -86,6 +87,19 @@ class Resume extends Component<IProps, IState> {
                                 }
                             ]}
                         />
+
+                        <h2>Educação</h2>
+                        <Educations 
+                            educations={[
+                                {
+                                    course: "Engenharia da Computação",
+                                    institution: "Escola Politécnica de Pernambuco",
+                                    start_date: "2013-04-01",
+                                    end_date: "2018-04-01"
+                                }
+                            ]}
+                        />
+                        
                     </Col>
 
                     <Col>

@@ -36,7 +36,7 @@ class ContactInfo extends Component<IProps> {
                     <Col><span data-test="params"><IoMdHome /> {this.props.address}</span></Col>
                     <Col><span data-test="params"><IoIosContacts />{this.props.social_media}</span></Col>
                     {this.props.authenticated ? (
-                        <ModalUpdate onSubmitHandler={this.updateHandler}>
+                        <ModalUpdate title="Informações de Contato" onSubmitHandler={this.updateHandler}>
                             <ModalContactInfo />
                         </ModalUpdate>
                     ) : null}
