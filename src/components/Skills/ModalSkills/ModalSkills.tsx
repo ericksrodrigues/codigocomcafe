@@ -72,6 +72,7 @@ class ModalSkills extends Component<IProps, IState>{
     public render() {
         const { skills, newSkills } = this.state;
         return (
+            
             <Form>
                 <FormGroup>
                     <Label for="skill">Habilidade:</Label>

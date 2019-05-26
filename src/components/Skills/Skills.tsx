@@ -2,7 +2,8 @@ import React from 'react';
 import ModalUpdate from '../../hoc/ModalUpdate/ModalUpdate';
 import { Progress } from 'reactstrap';
 import ModalSkills from './ModalSkills/ModalSkills';
-
+import Card from '../../hoc/Card/Card';
+import './Skills.scss';
 interface IProps {
     skills: Array<{ skill: string, level: "beginner" | "basic" | "intermediate" | "advanced" }>;
     username: string;
@@ -18,20 +19,21 @@ const mapLevel = {
 }
 
 const skills: React.FC<IProps> = props => (
-    <div>
-        {props.authenticated ? <ModalUpdate onSubmitHandler={props.onUpdate} title="Alterar Idiomas">
-            <ModalSkills skills={props.skills} username={props.username} />
-        </ModalUpdate> : null
-        }
-        <h2>Habilidades</h2>
+    <Card title="Habilidades">
+
         {props.skills.map(skill => (
             <div className="skills" key={skill.skill}>
-                <div className="text-center">{skill.skill + " " + mapLevel[skill.level].text}</div>
+                <div className="text_skill">{skill.skill + " " + mapLevel[skill.level].text}</div>
                 <Progress value={mapLevel[skill.level].value} />
                 <div />
             </div>
         ))}
-    </div>
+        <br />
+        {props.authenticated ? <ModalUpdate onSubmitHandler={props.onUpdate} title="Alterar Idiomas">
+            <ModalSkills skills={props.skills} username={props.username} />
+        </ModalUpdate> : null
+        }
+    </Card>
 );
 
 export default skills;
