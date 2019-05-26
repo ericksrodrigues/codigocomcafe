@@ -28,7 +28,7 @@ class ModalUpdate extends Component<IProps, IState> {
         const { children } = this.props;
         return (
             <>
-                <Button color="primary" onClick={this.toggle}>Alterar</Button>
+                <Button color="primary" size="sm" onClick={this.toggle}>Alterar</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                     <ModalBody>
