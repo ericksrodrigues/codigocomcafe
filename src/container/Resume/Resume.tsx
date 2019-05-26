@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import user_image from '../../assets/user-image.png';
 import PersonalInformation from '../../components/PersonalInformation/PersonalInformation';
 import ContactInfo from '../../components/ContactInfo/ContactInfo';
+import WorkExperience from '../../components/WorkExperience/WorkExperience';
 import './Resume.scss';
 import Languages from '../../components/Languages/Languages';
 
@@ -50,7 +51,13 @@ class Resume extends Component<IProps, IState> {
                 <Row className='resume__contact'>
 
                     <Col>
-                        <ContactInfo email="dummy@gmail.com" address="Recife Pernambuco" social_media="facebook.com" phone_number="99388-2223" />
+                        <ContactInfo 
+                            authenticated
+                            email="dummy@gmail.com" 
+                            address="Recife Pernambuco" 
+                            social_media="facebook.com" 
+                            phone_number="99388-2223"
+                        />
                     </Col>
 
                 </Row>
@@ -58,7 +65,27 @@ class Resume extends Component<IProps, IState> {
                 <Row className="resume__content">
 
                     <Col>
-                        <p>Experience & description</p>
+                        <h2>Experiência Profissional</h2>
+                        <WorkExperience 
+                            experiences={[
+                                {
+                                    job_name: 'Celpe', rule: 'Dev. Fullstack', start_date: '2015-04-24', end_date: '2018-04-07', tasks: [
+                                        'Desenvolvimento de paineis e dashboards',
+                                        'Automação de relatórios',
+                                        'Supporte de manuntenção',
+                                        'Criação de Projetos Inovadores P&D'
+                                    ]                            
+                                },
+                                {
+                                    job_name: 'Fábrica de Negócio', rule: 'Dev. Fullstack', start_date: '2018-05-03', end_date: '', tasks: [
+                                        'Desenvolvimento de paineis e dashboards',
+                                        'Automação de relatórios',
+                                        'Supporte de manuntenção',
+                                        'Criação de Projetos Inovadores P&D'
+                                    ]                            
+                                }
+                            ]}
+                        />
                     </Col>
 
                     <Col>
