@@ -52,11 +52,11 @@ class Resume extends Component<IProps, IState> {
                 <Row className='resume__contact'>
 
                     <Col>
-                        <ContactInfo 
+                        <ContactInfo
                             authenticated
-                            email="dummy@gmail.com" 
-                            address="Recife Pernambuco" 
-                            social_media="facebook.com" 
+                            email="dummy@gmail.com"
+                            address="Recife Pernambuco"
+                            social_media="facebook.com"
                             phone_number="99388-2223"
                         />
                     </Col>
@@ -74,7 +74,7 @@ class Resume extends Component<IProps, IState> {
                                         'Automação de relatórios',
                                         'Supporte de manuntenção',
                                         'Criação de Projetos Inovadores P&D'
-                                    ]                            
+                                    ]
                                 },
                                 {
                                     job_name: 'Fábrica de Negócio', rule: 'Dev. Fullstack', start_date: '2018-05-03', end_date: '', tasks: [
@@ -82,7 +82,7 @@ class Resume extends Component<IProps, IState> {
                                         'Automação de relatórios',
                                         'Supporte de manuntenção',
                                         'Criação de Projetos Inovadores P&D'
-                                    ]                            
+                                    ]
                                 }
                             ]}
                         />
@@ -97,21 +97,23 @@ class Resume extends Component<IProps, IState> {
                                 }
                             ]}
                         />
-                        
+
                     </Col>
 
                     <Col>
                         <p>
                             <Languages
-                            onUpdate={() => {
-                                //todo: função de atualização
-                            }}
-                            languages={[
-                                {
-                                    language: "Inglês",
-                                    level: "intermediate"
-                                }
-                            ]} />
+                                authenticated
+                                username="Ericks"
+                                onUpdate={() => {
+                                    //todo: função de atualização
+                                }}
+                                languages={[
+                                    {
+                                        language: "Inglês",
+                                        level: "intermediate"
+                                    }
+                                ]} />
                         </p>
                     </Col>
 
