@@ -28,4 +28,8 @@ describe('<ContactInfo />', (): void => {
         expect(element).toHaveLength(4); 
     });
 
+
+    it('it should test', () => {
+        expect(1).toBe(1);
+    });
 });
