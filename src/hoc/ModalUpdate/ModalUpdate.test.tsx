@@ -5,7 +5,7 @@ import ModalUpdate from './ModalUpdate';
 describe('<PersonalInformaition />', (): void => {
     let wrapper: ShallowWrapper;
     beforeEach(() => {
-        wrapper = shallow(<ModalUpdate onSubmitHandler={() => { }} />);
+        wrapper = shallow(<ModalUpdate title="title" onSubmitHandler={() => { }} />);
     });
     it('has to close modal when execute onSuccess', () => {
         const component = wrapper.instance() as ModalUpdate;

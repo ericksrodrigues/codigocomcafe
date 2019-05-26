@@ -30,11 +30,11 @@ class PersonalInformation extends Component<IProps, IState> {
         return (
             <div>
 
-                <span data-test="params">{name}</span>
-                <span data-test="params">{job}</span>
-                <span data-test="params">{resume}</span>
+                <h1 data-test="params">{name}</h1>
+                <h2 data-test="params">{job}</h2>
+                <p data-test="params">{resume}</p>
                 {authenticated ? (
-                    <ModalUpdate onSubmitHandler={this.updateHandler}>
+                    <ModalUpdate title="Atualizar Informações Pessoais" onSubmitHandler={this.updateHandler}>
                         <ModalPersonalInformation username={username} />
                     </ModalUpdate>) : null}
             </div>

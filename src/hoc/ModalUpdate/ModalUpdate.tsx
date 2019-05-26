@@ -1,8 +1,9 @@
 import React, { Component, Children } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
+import './ModalUpdate.scss';
 interface IProps {
     onSubmitHandler: () => void,
+    title: string
 }
 
 interface IState {
@@ -25,12 +26,12 @@ class ModalUpdate extends Component<IProps, IState> {
     }
 
     public render() {
-        const { children } = this.props;
+        const { children, title } = this.props;
         return (
             <>
-                <Button color="primary" size="sm" onClick={this.toggle}>Alterar</Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                <Button color="primary" onClick={this.toggle}>Alterar</Button>
+                <Modal size="lg" className="modal_update" isOpen={this.state.modal} toggle={this.toggle}>
+                    <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
                     <ModalBody>
                         {children}
                     </ModalBody>
