@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Education } from '../../utils/customTypes';
+import ModalUpdate from '../../hoc/ModalUpdate/ModalUpdate';
+import ModalEducations from './ModalEducations/ModalEducations';
 import './Educations.scss';
-
-type Education = {course: string, institution: string, start_date: string, end_date: string}
 
 interface IProps {
     educations?: Education[]
 }
 
 interface IState {
-
+    
 }
 
 class Educations extends Component<IProps, IState> {
 
+    onSubmithandler = (): void => {
+
+    }
+
     public render() {
+        
         return (
             <Container fluid>
+                <Row>
+                    <Col><h2>Educação</h2></Col>
+                    <Col>
+                        <ModalUpdate title="Adicionar nova educação" onSubmitHandler={this.onSubmithandler}>
+                            {/* <ModalEducations /> */}
+                        </ModalUpdate>
+                    </Col>
+                </Row>
                 <Row>
                     <Col>
                         {

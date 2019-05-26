@@ -65,8 +65,7 @@ class Resume extends Component<IProps, IState> {
 
                 <Row className="resume__content">
 
-                    <Col>
-                        <h2>Experiência Profissional</h2>
+                    <Col>                        
                         <WorkExperience 
                             experiences={[
                                 {
@@ -87,8 +86,7 @@ class Resume extends Component<IProps, IState> {
                                 }
                             ]}
                         />
-
-                        <h2>Educação</h2>
+                        
                         <Educations 
                             educations={[
                                 {

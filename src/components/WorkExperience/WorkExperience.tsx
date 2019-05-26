@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { Experience } from '../../utils/customTypes';
 import './WorkExperience.scss';
-
-type Experience = {job_name: string, rule: string, start_date: string, end_date: string, tasks: string[]};
 
 interface IProps {
     experiences?: Experience[]
@@ -16,6 +15,11 @@ class WorkExperience extends Component<IProps, IState> {
     public render() {
         return (
             <Container fluid>
+                <Row>
+                    <Col>
+                        <h2>Experiência Profissional</h2>
+                    </Col>
+                </Row>
                 <Row>
                     <Col>
                         {

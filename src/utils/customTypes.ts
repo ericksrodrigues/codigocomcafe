@@ -1,0 +1,2 @@
+export type Education = {course: string, institution: string, start_date: string, end_date: string};
+export type Experience = {job_name: string, rule: string, start_date: string, end_date: string, tasks: string[]};
