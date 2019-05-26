@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import user_image from '../../assets/user-image.png';
 import PersonalInformation from '../../components/PersonalInformation/PersonalInformation';
+import ContactInfo from '../../components/ContactInfo/ContactInfo';
 import './Resume.scss';
 
 interface IProps {
@@ -48,7 +49,7 @@ class Resume extends Component<IProps, IState> {
                 <Row className='resume__contact'>
 
                     <Col>
-                        <p>Contact information</p>
+                        <ContactInfo email="dummy@gmail.com" address="Recife Pernambuco" social_media="facebook.com" phone_number="99388-2223"/>
                     </Col>
 
                 </Row>

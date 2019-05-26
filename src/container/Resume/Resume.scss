@@ -1,4 +1,4 @@
-$contact-background: #a7a7a7;
+$contact-background: #e2e2e2;
 
 .resume {
     
@@ -11,6 +11,7 @@ $contact-background: #a7a7a7;
 .resume__contact {
     text-align: center;
     background: $contact-background;
+    padding: 5px;
 }
 
 .resume__content {

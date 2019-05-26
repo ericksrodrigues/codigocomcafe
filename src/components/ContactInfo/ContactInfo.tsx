@@ -1,5 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { 
+    IoIosMail,
+    IoIosPhonePortrait,
+    IoMdHome,
+    IoIosContacts
+} from 'react-icons/io';
 
 interface IProps {
     email?: string;
@@ -9,12 +15,14 @@ interface IProps {
 }
 
 const ContactInfo: React.FC<IProps> = (props) => (
-    <div data-test='contact-info'>
-        <span data-test="params">Email</span>
-        <span data-test="params">Telefone</span>
-        <span data-test="params">Endereço</span>
-        <span data-test="params">Social Midia</span>
-    </div>
+    <Container data-test='contact-info'>
+        <Row className="contact-info">
+            <Col><span data-test="params"><IoIosMail /> {props.email}</span></Col>
+            <Col><span data-test="params"><IoIosPhonePortrait /> {props.phone_number}</span></Col>
+            <Col><span data-test="params"><IoMdHome /> {props.address}</span></Col>
+            <Col><span data-test="params"><IoIosContacts />{props.social_media}</span></Col>
+        </Row>
+    </Container>
 );
 
 export default ContactInfo;
